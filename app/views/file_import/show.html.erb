@@ -1,0 +1,4 @@
+<h1>ImportFile#show</h1>
+<div>File name <%= @file_import.filename %></div>
+<div>Gross sales <%= Purchase.calculate_purchases(@file_import) %></div>
+<div><%= link_to "Index", file_import_index_path %></div>

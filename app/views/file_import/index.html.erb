@@ -1,0 +1,6 @@
+<h1>ImportFile#index</h1>
+<% @file_imports.each do |file_import| %>
+  <div><%= link_to file_import.filename, file_import_show_path(id: file_import.id) %></div>
+<% end %>
+
+<%= link_to "New Upload", file_import_new_path %>

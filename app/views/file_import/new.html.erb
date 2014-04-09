@@ -1,0 +1,7 @@
+<h1>ImportFile#new</h1>
+<%= form_for @file_import, url: {action: :upload} do |f| %>
+    <%= f.hidden_field :id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.file_field :file_import, accept: 'text/tab-seperated-values' %>
+    <%= f.submit %>
+  <% end %>

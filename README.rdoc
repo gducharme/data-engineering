@@ -1,0 +1,37 @@
+Installing File Importer
+
+This software was tested on ruby 2.0.0p353.
+
+/***/
+
+Use the following steps to install
+
+--git clone the repo and cd into it
+
+--bundle install
+
+--use or modify the connection to the database in config/database.yml
+
+--create user as per config/database.yml if needed
+
+--run `rake db:create db:migrate` with both RAILS_ENV=development and =test
+
+--run `bundle exec guard start` then type `all` at the prompt to run the test suite
+
+/***/
+
+Once installed, use these steps to run the application
+
+--rails s
+
+--in browser go to `http://localhost:3000/`
+
+--create an account with email or password, or login with OpenID
+(Not that OpenID will fail, as there is a problem with serialization of some OpenID objects. I worked around
+this locally by hardcoding the endpoints and claimed id urls. It would also fail on account of Rails 4 strong params,
+which require a patch to Devise Session Controller.)
+
+--upload a .tsv or .tab file
+
+--watch results, upload more, show any upload
+
